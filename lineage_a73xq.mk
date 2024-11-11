@@ -33,6 +33,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# RisingOS
+WITH_GMS := false
+TARGET_ENABLE_BLUR := true
+TARGET_HAS_UDFPS := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+TARGET_PREBUILT_BCR := false
+PRODUCT_NO_CAMERA := true
+RISING_MAINTAINER=alqix
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Qualcomm Snapdragon 778G" \
+    RisingMaintainer="alqix"
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a73xq
 PRODUCT_DEVICE := a73xq
